@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap');
+
+:root {
+  /* Material 3 Color System - Odontolyt Palette */
+  --primary: #006194;
+  --primary-container: #007bb9;
+  --on-primary: #ffffff;
+  --primary-fixed-dim: #93ccff;
+
+  --secondary: #006a61;
+  --secondary-container: #86f2e4;
+  --on-secondary-container: #006f66;
+
+  --tertiary: #006483;
+  
+  --background: #f7f9fb;
+  --surface: #ffffff;
+  --surface-container-lowest: #ffffff;
+  --outline: #6e797e;
+  --outline-variant: rgba(110, 121, 126, 0.1);
+  
+  --error: #ba1a1a;
+  
+  /* Typography */
+  --font-headline: 'Manrope', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Elevation & Borders */
+  --radius-xl: 12px;
+  --radius-3xl: 24px;
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 97, 148, 0.1), 0 10px 10px -5px rgba(0, 97, 148, 0.04);
+  
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--background);
+  color: #1a1c1e;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .headline {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* UI Components Utility Classes */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-xl);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  shadow: var(--shadow-xl);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-container);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-container);
+  color: var(--on-secondary-container);
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius-3xl);
+  padding: 2rem;
+  border: 1px solid var(--outline-variant);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--outline);
+}
+
+.input-group input, .input-group select, .input-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--outline);
+  background: var(--surface);
+  font-family: var(--font-body);
+  transition: var(--transition);
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 97, 148, 0.1);
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-cols-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
