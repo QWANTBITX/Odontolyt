@@ -57,17 +57,17 @@ const Home = () => {
 
           <div className="grid-cols-3">
             <div className="card">
-              <span className="material-symbols-outlined" style={{ fontSize: '3rem', color: var(--primary), marginBottom: '1rem' }}>dentistry</span>
+              <span className="material-symbols-outlined" style={{ fontSize: '3rem', color: 'var(--primary)', marginBottom: '1rem' }}>dentistry</span>
               <h3>Odontología General</h3>
               <p>Limpiezas, calzaduras y prevención para mantener tu salud bucal al día.</p>
             </div>
             <div className="card">
-              <span className="material-symbols-outlined" style={{ fontSize: '3rem', color: var(--primary), marginBottom: '1rem' }}>orthodontics</span>
+              <span className="material-symbols-outlined" style={{ fontSize: '3rem', color: 'var(--primary)', marginBottom: '1rem' }}>orthodontics</span>
               <h3>Ortodoncia</h3>
               <p>Alinea tu sonrisa con los sistemas más modernos y cómodos del mercado.</p>
             </div>
             <div className="card">
-              <span className="material-symbols-outlined" style={{ fontSize: '3rem', color: var(--primary), marginBottom: '1rem' }}>health_and_safety</span>
+              <span className="material-symbols-outlined" style={{ fontSize: '3rem', color: 'var(--primary)', marginBottom: '1rem' }}>health_and_safety</span>
               <h3>Implantes</h3>
               <p>Recupera la funcionalidad y estética de tu sonrisa con resultados naturales.</p>
             </div>
